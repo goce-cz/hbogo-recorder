@@ -31,6 +31,7 @@ try {
     try {
       const bandi = path.resolve(bandicamExecutable)
       execFile(bandi, ['/record'])
+      await delay(5000)
 
       const browser = await puppeteer.launch({
         headless: false,
@@ -38,6 +39,7 @@ try {
         args: ['--start-fullscreen'],
         userDataDir: './profile'
       })
+
       const page = await browser.newPage()
       await page.setViewport({
         width: 1366,
@@ -60,7 +62,7 @@ try {
 
         await browser.close()
       } finally {
-        execFile(bandi, ['/stop'])
+        // execFile(bandi, ['/stop'])
       }
     } catch (error) {
       console.error(error)
