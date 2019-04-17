@@ -47,6 +47,9 @@ try {
       const bandi = path.resolve(bandicamExecutable)
 
       execFile(bandi, ['/record', '/nosplash'])
+
+      await page.bringToFront()
+
       try {
         const startOverButton = await page.$('.hbo-sdk--startpos-secondary-button')
         if (startOverButton) {
