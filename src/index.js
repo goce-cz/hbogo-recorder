@@ -62,7 +62,7 @@ try {
 
         await browser.close()
       } finally {
-        // execFile(bandi, ['/stop'])
+        execFile(bandi, ['/stop'])
       }
     } catch (error) {
       console.error(error)
