@@ -46,7 +46,7 @@ try {
 
       const bandi = path.resolve(bandicamExecutable)
 
-      execFile(bandi, ['/record', '/nosplash'])
+      execFile(bandi, ['/record'])
 
       await page.bringToFront()
 
