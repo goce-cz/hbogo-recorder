@@ -29,6 +29,9 @@ const delay = timeout => new Promise(resolve => setTimeout(resolve, timeout))
 try {
   (async () => {
     try {
+      const bandi = path.resolve(bandicamExecutable)
+      execFile(bandi, ['/record'])
+
       const browser = await puppeteer.launch({
         headless: false,
         executablePath: path.resolve(chromeExecutable),
@@ -43,10 +46,6 @@ try {
       await page.goto(seriesUrl)
       await page.click(`[data-episode-number="${episodeNumber}"]`)
       await delay(2000)
-
-      const bandi = path.resolve(bandicamExecutable)
-
-      execFile(bandi, ['/record'])
 
       await page.bringToFront()
 
