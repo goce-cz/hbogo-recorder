@@ -49,8 +49,6 @@ try {
       await page.click(`[data-episode-number="${episodeNumber}"]`)
       await delay(2000)
 
-      await page.bringToFront()
-
       try {
         const startOverButton = await page.$('.hbo-sdk--startpos-secondary-button')
         if (startOverButton) {
