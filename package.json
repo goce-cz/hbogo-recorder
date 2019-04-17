@@ -1,0 +1,14 @@
+{
+  "name": "hbogo-recorder",
+  "version": "1.0.0",
+  "description": "Tool for recording HBO GO shows.",
+  "main": "src/index.js",
+  "repository": "git@github.com:goce-cz/hbogo-recorder.git",
+  "author": "goce@goce.cz",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@types/puppeteer-core": "^1.9.0",
+    "puppeteer-core": "^1.14.0"
+  }
+}
